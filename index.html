@@ -116,8 +116,26 @@
           </ul>
         </nav>
 
-        <a href="#" class="btn">Book appointment</a>
-
+        <a href="#" class="btn" id="bookBtn">Book appointment</a>
+          
+          <div id="popupForm" class="popup">
+            <div class="popup-content">
+                <span class="close-btn">&times;</span>
+                <h2>Book Appointment</h2>
+                <form id="appointmentForm">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+    
+                    <label for="date">Appointment Date:</label>
+                    <input type="date" id="date" name="date" required>
+    
+                    <button type="submit" class="submit-btn">Submit</button>
+                </form>
+            </div>
+        </div>
         <button class="nav-toggle-btn" aria-label="Toggle menu" data-nav-toggler>
           <ion-icon name="menu-sharp" aria-hidden="true" class="menu-icon"></ion-icon>
           <ion-icon name="close-sharp" aria-hidden="true" class="close-icon"></ion-icon>
@@ -154,12 +172,13 @@
               Discover advanced dental solutions tailored just for you at Jyothsna Clinic.
             </p>
 
-            <form action="" class="hero-form">
+            <form action="" class="hero-form" id="callbackForm">
               <input type="email" name="email_address" aria-label="email" placeholder="Your Email Address..." required
-                class="email-field">
-
+                  class="email-field" id="emailInput">
+          
               <button type="submit" class="btn">Get Call Back</button>
-            </form>
+          </form>
+          
 
           </div>
 
@@ -526,6 +545,7 @@
           </ul>
 
         </div>
+        
       </section>
 
 

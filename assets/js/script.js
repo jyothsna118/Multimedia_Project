@@ -58,3 +58,55 @@ window.addEventListener("scroll", function () {
     backTopBtn.classList.remove("active");
   }
 });
+
+// Booking appoinment
+document.getElementById("bookBtn").addEventListener("click", function (event) {
+  event.preventDefault();
+  document.getElementById("popupForm").style.display = "flex";
+});
+
+document.querySelector(".close-btn").addEventListener("click", function () {
+  document.getElementById("popupForm").style.display = "none";
+});
+
+document.getElementById("appointmentForm").addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  // Get form values
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const date = document.getElementById("date").value;
+
+  // Show the form data in an alert message
+  alert(`Name: ${name}\nEmail: ${email}\nAppointment Date: ${date}`);
+
+  // Close the popup form after submission
+  document.getElementById("popupForm").style.display = "none";
+
+  // Optional: Clear the form
+  document.getElementById("appointmentForm").reset();
+});
+
+
+// Get call Back functionality
+document.getElementById("callbackForm").addEventListener("submit", function (event) {
+  event.preventDefault(); // Prevent the default form submission
+
+  // Get the email address from the input field
+  const email = document.getElementById("emailInput").value;
+
+  // Show the email address in an alert message
+  alert(`Email Address: ${email}`);
+
+  // Optional: Clear the input field after showing the alert
+  document.getElementById("callbackForm").reset();
+});
+
+
+
+
+
+
+
+
+

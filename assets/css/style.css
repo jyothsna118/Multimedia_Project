@@ -1,3 +1,73 @@
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  width: 300px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"] {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  box-sizing: border-box;
+}
+
+.submit-btn {
+  margin-top: 20px;
+  padding: 10px;
+  width: 100%;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.submit-btn:hover {
+  background-color: #218838;
+}
+
+
+
 :root {
 
   /**
@@ -717,6 +787,37 @@ body {
 
 
 
+/*  */
+.has-scrollbar {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth; /* Enables smooth scrolling */
+}
+
+.scroll-controls {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.slide-btn {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.slide-btn:focus {
+    outline: none;
+}
+
+.slide-btn:hover {
+    background-color: #0056b3;
+}
+
+
+
 /*-----------------------------------*\
   #MEDIA QUERIES
 \*-----------------------------------*/
@@ -1182,4 +1283,54 @@ body {
 
   .cta-banner { margin-block-start: -120px; }
 
+}
+
+.banner__wrapper:hover {
+  animation-play-state: paused;
+}
+
+.banner__card {
+  max-width: 300px;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.banner__content {
+  position: absolute;
+  padding: 1rem;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  transform: translateY(100%);
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.8)
+  );
+  transition: 0.3s;
+  z-index: 1;
+}
+
+.banner__card:hover .banner__content {
+  transform: translateY(0);
+}
+
+.banner__content h4 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-family: var(--header-font);
+  color: var(--white);
+}
+
+.banner__ratings {
+  margin-bottom: 0.5rem;
+  display: flex;
+  gap: 5px;
+  color: goldenrod;
+}
+
+.banner__content p {
+  color: var(--white);
 }
